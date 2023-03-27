@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'hanken';
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf), url(./assets/fonts/static/HankenGrotesk-Bold.ttf),url(./assets/fonts/static/HankenGrotesk-ExtraBold.ttf), url(./assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(240, 91%, 92%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue:hsla(241, 72%, 46%, 0);
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-family: hanken;
+}
+.continer{
+    width: 100vh;
+    height: 100vh;
+    min-width: 280px;
+    max-width: 450px;
+}
+.top{
+    height: 300.15px;
+    width: 100%;
+    background-color: var(--Light-royal-blue);
+    border-radius: 0 0 35px 35px;
+    text-align: center;
+}
+.top-top{
+    padding: 10px 0 0;
+    color: var(--Light-lavender);
+    font-size: 18px;
+}
+.sercel{
+    background: linear-gradient(to bottom,hsla(256, 72%, 46%, 1),var(--Light-royal-blue));
+    margin: 16px auto;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.top-nambur{
+    font-size: 60px;
+    color: var(--White);
+    margin-top: 16px;
+    font-weight: 600;
+}
+.top p.of{
+    color: hsl(223, 10%, 60%);
+}
+.great{
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--White);
+}
+.info{
+    padding: 7px 41px 0;
+    color: var(--Light-lavender);
+}
+.bottom{
+    padding: 11px 30px 0;
+}
+.top-bottom{
+    font-size: 22px;
+    font-weight: 400;
+}
+.bottom-continer{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 37vh;
+    margin: 15px 0 10px;
+
+}
+.item{
+    width: 100%;
+    height: 20%;
+    max-height: 67.53px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.score{
+    margin-right: 20px;
+}
+.black{
+    font-weight: 800;
+}
+.gray{
+    color: rgb(124, 123, 123);
+}
+.name{
+    margin-left: 30px;
+    font-size: 18px;
+}
+.reaction{
+    background-color: rgba(243, 186, 186, 0.219);
+}
+.red{
+    color: var(--Light-red);
+}
+.red::before{
+    content: url(./assets/images/icon-reaction.svg);
+    align-self: center;
+    position: absolute;
+    left: 7px;
+}
+.memory{
+    background-color: rgba(247, 216, 157, 0.274);
+}
+.cram{
+    color: var(--Orangey-yellow);
+}
+.cram::before{
+    content: url(./assets/images/icon-memory.svg);
+    position: absolute;
+    left: 7px;
+}
+.verbal{
+    background-color: rgba(176, 231, 245, 0.137);
+}
+.green{
+    color: var(--Green-teal);
+}
+.green::before{
+    content: url(./assets/images/icon-verbal.svg);
+    position: absolute;
+    left: 7px;
+}
+.visual{
+    background-color: rgba(118, 109, 250, 0.144);
+}
+.blue{
+    color: var(--Cobalt-blue);
+}
+.blue::before{
+    content: url(./assets/images/icon-visual.svg);
+    position: absolute;
+    left: 7px;
+}
+.continue{
+    display: block;
+    width: 95%;
+    padding: 13px 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--Dark-gray-blue);
+    border-radius: 20px;
+    color: var(--White);
+    font-size: 18px;
+}
+.continue:hover{
+    background: linear-gradient(to top, var(--Cobalt-blue), var(--Violet-blue));
+}
+@media screen and (min-width: 550px) {
+    body{
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+    }
+    .continer{
+        display: flex;
+        height: auto;
+        max-width: none;
+        width: 520px;
+        border-radius: 25px;
+        box-shadow: 1px 1px 8px rgb(145, 149, 207);
+    }
+    .bottom{
+        width: 50%;
+        padding: 11px 18px;
+    }
+    .bottom-continer{
+        height: 223px;
+    }
+    .top{
+        height: auto;
+        width: 50%;
+        border-radius: 25px;
+    }
+    p.info{
+        font-size: 13px;
+    }
+    .great{
+        margin-top: 30px;
+        font-weight: 400;
+    }
+    .continue{
+        width: 100%;
+        padding: 11px 0;
+    }
+}
